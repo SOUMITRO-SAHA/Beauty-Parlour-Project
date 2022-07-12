@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+#body-main-heading-bold {
+    font-size: 80px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    color: #282828;
+}
+
+/* Header Section */
+body .mobile-menu-layout-slide-horizontal.menu-slide-opened:before {
+    opacity: .7;
+    visibility: visible;
+    transition: opacity .3s ease-in 0s, visibility 0s linear 0s;
+}
+
+body .mobile-menu-layout-slide-horizontal:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-out 0s, visibility 0s linear .3s;
+}
+
+/* Nav Items */
+.navbar-nav li {
+    margin: 0 3px;
+}
+
+/* Mobile Menu Slide Close */
+.slide-close {
+    display: block;
+    position: relative;
+    z-index: 4;
+}
+
+.mobile-menu-slide-close {
+    display: block;
+    border: none;
+    width: 36px;
+    height: 30px;
+    text-indent: 100%;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 19px;
+    top: 22px;
+    cursor: pointer;
+    outline: none;
+    background: 0 0;
+    padding: 0;
+}
+
+.mobile-menu-slide-close:before,
+.mobile-menu-slide-close:after {
+    background-color: #3c3950;
+    display: block;
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0
+}
+
+.mobile-menu-slide-close:before {
+    transform: rotate(45deg);
+    top: 13px
+}
+
+.mobile-menu-slide-close:after {
+    top: 13px;
+    transform: rotate(-45deg);
+}
+
+/* Active Class */
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+    color: #e77785 !important;
+}
+
+/* Main Menu Section */
+.menu-slide-header {
+    display: flex;
+    flex-direction: row;
+    line-height: 2.5;
+    align-items: baseline;
+}
+
+.menu-slide-brand {
+    position: relative;
+    font-size: 30px;
+    bottom: 9px;
+}
+
+
+
+.minisearch {
+    display: none;
+}
+
+/* All Images Section Start*/
+.bg-img {
+    background: center fixed no-repeat;
+    height: 100vh;
+}
+
+/* All Images Section End */
+
+/* Main Body Section */
+
+@media screen and (max-width:979px) {
+    .slide-menu {
+        background-color: #dfe5e8;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 50%;
+        height: 100%;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed~.navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+
+}
+
+
+@media screen and (max-width:1440px)and (min-width:979px) {}
+
+
+/* Animation Section */
+.main {
+    display: block;
+    width: 100%;
+}
+
+.body-text-outer {
+    position: relative;
+    background-image: url('images/beauty-salon_title_bg1.jpg');
+}
+
+#body-text {
+    position: absolute;
+    top: 45%;
+    left: 05%;
+}
+
+.body-main-heading.letters-slide-up.body-main-heading-animated .body-main-heading-letter {
+    animation-name: body-mainHeadingLettersSlideUp;
+    position: relative;
+    transform: translateY(100%);
+    opacity: 0;
+    display: inline-flex;
+    animation-fill-mode: forwards;
+    animation-duration: .35s;
+    animation-timing-function: cubic-bezier(.3, 1.7, .4, 1)
+}
+
+@keyframes body-mainHeadingLettersSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+
+.body-main-heading {
+    position: relative;
+}
+
+.body-main-heading.body-main-heading-animated {
+    opacity: 1
+}
+
+.body-main-heading .body-main-heading-line-wrap {
+    display: block;
+    overflow: hidden
+}
+
+.body-main-heading .body-main-heading-word-wrap,
+.body-main-heading .body-main-heading-letter-wrap {
+    display: inline-flex;
+    overflow: hidden
+}
+
+.body-main-heading .body-main-heading-word {
+    display: inline-flex;
+    white-space: nowrap
+}
+
+.body-main-heading.lines-slide-up.body-main-heading-animated .body-main-heading-line {
+    animation-name: body-mainHeadingLinesSlideUp;
+    transform: translateY(100%);
+    display: inline-block;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0, 1, .3, 1)
+}
+
+@keyframes body-mainHeadingLinesSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.body-main-heading.lines-slide-up-random.body-main-heading-animated .body-main-heading-word {
+    animation-name: body-mainHeadingLinesSlideUpRandom;
+    transform: translateY(100%);
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(.3, 0, 0, 1)
+}
+
+@keyframes body-mainHeadingLinesSlideUpRandom {
+    from {
+        opacity: 1;
+        transform: translateY(100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.body-main-heading.words-slide-up.body-main-heading-animated .body-main-heading-word {
+    animation-name: body-mainHeadingWordsSlideUp;
+    transform: translateY(100%);
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.3, 1.7, .4, 1)
+}
+
+@keyframes body-mainHeadingWordsSlideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 1
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+.body-main-heading.words-slide-left.body-main-heading-animated .body-main-heading-word {
+    animation-name: body-mainHeadingWordsSlideLeft;
+    transform: translateX(100px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(.25, 1, .5, 1)
+}
+
+@keyframes body-mainHeadingWordsSlideLeft {
+    from {
+        transform: translateX(100px);
+        opacity: 1
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+.body-main-heading.words-slide-right.body-main-heading-animated .body-main-heading-word {
+    animation-name: body-mainHeadingWordsSlideRight;
+    transform: translateX(-100px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(.25, 1, .5, 1)
+}
+
+@keyframes body-mainHeadingWordsSlideRight {
+    from {
+        transform: translateX(-100px);
+        opacity: 1
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+
+
+.body-main-heading.typewriter.body-main-heading-animated .body-main-heading-letter {
+    animation-name: body-mainHeadingTypewriter;
+    position: relative;
+    opacity: 0;
+    display: inline-flex;
+    animation-fill-mode: forwards;
+    animation-duration: 0ms;
+    animation-timing-function: inherit
+}
+
+@keyframes body-mainHeadingTypewriter {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.body-main-heading.letters-scale-out.body-main-heading-animated .body-main-heading-letter {
+    animation-name: body-mainHeadingLettersScaleOut;
+    position: relative;
+    transform: scale(1.5);
+    opacity: 0;
+    display: inline-flex;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(.3, 4, .4, 1)
+}
+
+@keyframes body-mainHeadingLettersScaleOut {
+    from {
+        opacity: 0;
+        transform: scale(1.5)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+.body-main-heading-wrap {
+    position: relative;
+    display: inline-flex
+}
+
+.body-main-heading.background-sliding {
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    z-index: 1
+}
+
+.body-main-heading.background-sliding:before {
+    content: '';
+    transform-origin: left;
+    transform: scale(0, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.body-main-heading.background-sliding.body-main-heading-animated:before {
+    animation-name: body-mainHeadingbackgroundSliding;
+    animation-duration: .7s;
+    animation-fill-mode: forwards
+}
+
+@keyframes body-mainHeadingbackgroundSliding {
+    from {
+        transform: scale(0, 1)
+    }
+
+    to {
+        transform: scale(1, 1)
+    }
+}
+
+.body-main-heading.background-sliding .body-main-heading-text-wrap {
+    overflow: hidden;
+    transform: translateX(-105%);
+    position: relative;
+    z-index: 2
+}
+
+.body-main-heading.body-main-heading-animated .body-main-heading-text-wrap {
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-duration: .7s
+}
+
+.body-main-heading.background-sliding .body-main-heading-text {
+    transform: translateX(105%);
+    display: block;
+    position: relative;
+    z-index: 2
+}
+
+.body-main-heading.body-main-heading-animated .body-main-heading-text {
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-duration: inherit;
+    transition-delay: inherit;
+    transition-timing-function: inherit
+}
+
+.body-main-heading-rotating {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    transition-property: width;
+    transition-timing-function: ease;
+    transition-duration: .5s
+}
+
+.body-main-heading-rotating:before {
+    content: '\200b'
+}
+
+.body-main-heading-rotating-text {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    overflow: hidden;
+    display: inline-flex;
+    white-space: nowrap;
+    transition-property: width, opacity;
+    transition-timing-function: ease;
+    transition-duration: .5s
+}
+
+/* Extra CSS */
+.hide {
+    display: none;
+}
+
+.opened {
+    z-index: 1003;
+    opacity: 1;
+}
