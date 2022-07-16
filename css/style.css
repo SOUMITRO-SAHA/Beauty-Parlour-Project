@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +34,7 @@ p {
 
 #body-main-heading-bold {
     font-size: 80px;
-    font-family: 'Abril Fatface', cursive;
+    font-family: abrial fatface;
     font-weight: 400;
     line-height: normal;
     font-style: normal;
@@ -184,16 +185,6 @@ Mobile Menu Slide Close .slide-close {
     width: 100%;
 }
 
-.body-text-outer {
-    position: relative;
-    background-image: url('images/beauty-salon_title_bg1.jpg');
-}
-
-#body-text {
-    position: absolute;
-    top: 10%;
-    left: 05%;
-}
 
 .body-main-heading.letters-slide-up.body-main-heading-animated .body-main-heading-letter {
     animation-name: body-mainHeadingLettersSlideUp;
@@ -560,52 +551,6 @@ body .con_wrapper {
     clear: both
 }
 
-/*
-@media screen and (max-width:1199px) {
-    .con_row {
-        margin-top: 1.421rem;
-    }
-
-    .con_row>* {
-        margin-top: 0;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .col-sm-12 {
-        width: 100%;
-    }
-
-    .col-sm-1,
-    .col-sm-2,
-    .col-sm-3,
-    .col-sm-4,
-    .col-sm-5,
-    .col-sm-6,
-    .col-sm-7,
-    .col-sm-8,
-    .col-sm-9,
-    .col-sm-10,
-    .col-sm-11,
-    .col-sm-12 {
-        float: left;
-    }
-}
-
-.col-inner {
-    color: #777;
-}
-
-.con-innner::after,
-.con-innner::before {
-    content: " ";
-    display: table;
-}
-
-.con-innner::after {
-    clear: both;
-}
-*/
 
 /* Body Info Card || Text-Box */
 .info {
