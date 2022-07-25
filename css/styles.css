@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
+:root {
+    --main-bg-color: #fff;
+    --secondary-color: #e77785;
+    --main-font: Montserrat;
+    --font-color-bold: #282828;
+    --font-color-light: #777777;
+    --font-family-primary: Montserrat;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+.font-color-pink {
+    color: var(--secondary-color);
+}
+
+.font-medium {
+    font-size: 24px;
+}
+
+.font-large {
+    font-size: 40px;
+}
+
+.font-700 {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title-bold {
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 8px 0;
+}
+
+
+
+.title-light {
+    /* margin-right: 15px; */
+    font-size: 1.9rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px #282828;
+    margin: 8px 0;
+}
+
+.title-para {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--font-color-light);
+    text-transform: capitalize;
+    margin: 8px 0;
+}
+
+.title-h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title-h1 {
+    font-size: 2.8rem;
+    font-family: var(--font-family-primary);
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.title-700-font-medium {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.title-bolder-font-large {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+
+
+/* ############################### [Header Section] #################################### */
+/* Navigation Bar */
+.header-el .navigationBar .navbar-brand {
+    font-size: 2.2rem;
+}
+
+.header-el .navigationBar a {
+    font-size: 1.6rem;
+}
+
+.navbar-toggler span {
+    font-size: 1.3rem;
+}
+
+.nav-item {
+    margin: 0 0.8rem;
+}
+
+/* ######################## [Main body Section] ########################## */
+.main-body {
+    width: 100%;
+    height: 100vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Main Body Article */
+.light {
+    font-family: montserrat ultralight;
+    font-style: normal;
+    font-weight: 400;
+    /* color: var(--font-color-light); */
+    font-size: inherit;
+    line-height: inherit;
+    text-transform: uppercase;
+}
+
+.main-body-text {
+    padding: 2rem 3rem;
+}
+
+/* Sub-Title */
+.sub-title .st-word {
+    display: inline-block;
+    margin-right: 1rem;
+    white-space: nowrap;
+}
+
+.sub-title .st-word .ss-word-wrapper {
+    margin: 0;
+    padding: 0;
+    letter-spacing: .05em;
+
+}
+
+.sub-title .st-word .ss-word-wrapper .ss-word-letter,
+.ss-word-letter {
+    font-size: 1.7rem;
+    animation-name: letterSlideUp;
+    transform: translateY(100%);
+    display: inline-block;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0, 1, .3, 1);
+}
+
+@keyframes letterSlideUp {
+    from {
+        opacity: 1;
+        transform: translateY(100%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+/* Title  */
+
+.title .ss-heading-word-wrapper .ss-heading-word,
+.ss-heading-word {
+    opacity: 0;
+    transform: translateX(100%);
+    display: inline-block;
+    animation-name: titleWordSlideRight;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.25, 1, .5, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes titleWordSlideRight {
+    0% {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+/* Todo: Work Pending */
+@keyframes titleWordSlideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 1
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes titleWordSlideLeft {
+    from {
+        transform: translateX(100px);
+        opacity: 1
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+/* Activities Section */
+.activities {
+    width: 100%;
+    height: auto;
+    padding: 0 15rem;
+    padding-top: 155px;
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* requirement */
+.reqirement {
+    padding: 0 1.5rem;
+    line-height: 2;
+}
+
+.reqirement .title-h1 {
+    color: var(--secondary-color);
+}
+
+/* ######################## [Features Section] ####################### */
+.features {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.features-text {
+    width: 50%;
+}
+
+.features-main-headline .title-bold,
+.features-main-headline .title-light {
+    font-size: 36px;
+}
+
+.features-main-headline .title-bold {
+    font-weight: 600;
+}
+
+.features-text .title-para {
+    line-height: 24px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.feature-wrapper {
+    margin: 50px 0;
+    word-spacing: 8px;
+}
+
+.feature-wrapper i {
+    margin: auto 0;
+    font-size: 96px;
+    color: var(--secondary-color);
+}
+
+.feature-txt-wrapper .title-bold-txt-wrapper .title-bold {
+    /* font-size: 30px; */
+    font-weight: bolder;
+    color: #282828;
+}
+
+.feature-txt-wrapper .title-bold-txt-wrapper .title-bold,
+.feature-txt-wrapper .title-light {
+    font-size: 26px;
+    display: inline-block;
+    /* transform: translate3d(100px); */
+    /* animation: featuresSlidesUpOnScrolling 1s ease-in-out 0 backwards; */
+}
+
+.feature-txt-wrapper {
+    animation: fadeInRight 1.5fs ease-in;
+    animation-fill-mode: forwards;
+    animation-timeline: scroll-in-document;
+}
+
+
+.features-wrapper-inner {
+    display: flex;
+    word-spacing: 10px;
+    padding-left: 4rem;
+}
+
+.feature-icon {
+    position: relative;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.feature-1 {
+    margin-bottom: 10rem;
+}
+
+.animate_when_elm_almost_visible {
+    opacity: 0;
+}
+
+.animate_when_almost_visible.elem_appear {
+    opacity: 1;
+}
+
+.animate_when_almost_visible:not(.start_animation) {
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none
+}
+
+.feature-1 .title-bold-txt-wrapper {
+    animation: fadeInRight 2s ease-in-out forwards;
+}
+
+/* ######################## [Service Section] ####################### */
+.service {
+    width: 100%;
+    /* height: 900px; */
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.service-wrapper-heading {
+    color: var(--main-bg-color);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    text-align: left;
+}
+
+.service-inner-wrapper {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem;
+    /* align-items: center; */
+    line-height: 1;
+}
+
+.service-items {
+    text-align: center;
+    line-height: 22px;
+
+    box-shadow: 0 0 1px #999494;
+}
+
+.service-items-title {
+    line-height: 40px;
+    margin-top: 50px;
+}
+
+/*  ######################## [Portfolio Slider Section] #######################  */
+.service-carousel {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.position {
+    position: absolute;
+}
+
+.porfolio {
+    margin-top: 4rem;
+
+}
+
+.portfolio-wrapper img {
+    width: 490px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .portfolio-wrapper img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .portfolio-wrapper img {
+        height: 300px;
+    }
+}
+
+.owl-theme .owl-nav .disabled {
+    opacity: 1;
+}
+
+.owl-nav {
+    width: 100% !important;
+    height: 5rem !important;
+
+    border: none !important;
+    position: absolute !important;
+    display: flex;
+    justify-content: space-between;
+    top: 15rem;
+    z-index: 100;
+}
+
+.owl-nav>button.owl-prev,
+.owl-nav>button.owl-next {
+    width: 5rem !important;
+    border: none !important;
+    background-color: #282828 !important;
+    color: #fff !important;
+
+}
+
+.owl-nav>button:hover {
+    background-color: #e77785 !important;
+}
+
+.owl-nav .owl-prev span,
+.owl-nav .owl-next span {
+    border: none;
+    padding: 2rem !important;
+
+}
+
+/*  ######################## [Customer Review Section] #######################  */
+.carousel-item>img {
+    box-sizing: border-box;
+}
+
+/* ################################################################################# ################################### [ Animation Section] ########################### ####################################################################################*/
